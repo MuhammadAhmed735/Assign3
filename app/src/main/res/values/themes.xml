@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Chatify" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/themeColor</item>
+    </style>
+
+    <style name="NavDrawerTextStyle">
+        <item name="android:textSize">17sp</item> <!-- Adjust the text size as needed -->
+        <item name="android:textColor">@color/themeColor</item>
+
+        <!-- Add more attributes as needed, e.g., android:textStyle, android:fontFamily, etc. -->
+    </style>
+
+    <style name="Theme.Chatify" parent="Base.Theme.Chatify" />
+</resources>

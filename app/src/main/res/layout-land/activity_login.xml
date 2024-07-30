@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:gravity="center"
+    android:background="#F4F1F3"
+    tools:context=".LoginActivity">
+
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email_address"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:textSize="14sp"
+        android:layout_marginBottom="-15dp"
+        />
+
+
+    <EditText
+        android:id="@+id/email_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:textSize="17sp"
+
+        />
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:layout_gravity="start"
+        android:layout_marginStart="30dp"
+        android:textSize="14sp"
+        android:layout_marginBottom="-15dp"
+        />
+    <EditText
+        android:id="@+id/password_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:textSize="17sp"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/forgotPasswordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:layout_gravity="end"
+        android:layout_marginEnd="25dp"
+        android:textAllCaps="false"
+        android:letterSpacing="0.05"
+        android:textSize="15sp"
+        android:layout_marginTop="-22dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/login"
+        android:layout_weight="0.3"
+        android:layout_marginTop="30dp"
+        app:cornerRadius="5dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textSize="18sp"
+        android:layout_gravity="start"
+        android:letterSpacing="0.05"
+        />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signUpButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:text="Sign Up"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_weight="0.3"
+            android:layout_marginTop="30dp"
+            app:cornerRadius="5dp"
+            android:textSize="18sp"
+            android:layout_gravity="end"
+
+            android:letterSpacing="0.05"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:background="#F4F2F3"
+    >
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/contact_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="0dp"
+        android:layout_margin="0dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <LinearLayout
+            android:id="@+id/contactLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="100"
+            >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:scaleType="centerCrop"
+            android:shape="oval"
+
+            android:layout_weight="15"
+            android:src="@drawable/ic_account_circle_24"
+            android:contentDescription="@string/profile_picture"
+            />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_TextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="70"
+
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/ic_edit"
+
+                android:editable="false"
+
+                android:inputType="none"
+                android:text="Muhammad Ahmed"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <ImageButton
+                android:id="@+id/menuIcon"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:src="@drawable/ic_menu"
+               android:layout_marginStart="5dp"
+                android:backgroundTint="@android:color/transparent"
+                />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/messagesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/contact_cardview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/sendMessage_linearLayout"
+        />
+
+    <LinearLayout
+        android:id="@+id/sendMessage_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="100"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/layers"
+            android:layout_weight="0"
+            />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:hint="Enter Message"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:textFontWeight="98"
+            android:layout_marginStart="10dp"
+            android:drawableTint="@color/themeColor"
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="@color/themeColor"
+
+            />
+
+            <ImageButton
+                android:id="@+id/sendMessageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_send"
+                app:tint="@color/themeColor"
+                android:padding="8dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

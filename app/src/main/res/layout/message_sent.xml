@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sentmsglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        app:boxStrokeWidth="0dp"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:boxCornerRadiusTopEnd="0dp"
+        app:boxStrokeColor="@color/white"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxBackgroundColor="#D0E91E63"
+        >
+        <EditText
+            android:id="@+id/sentMessage_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sent messsage"
+            android:padding="8dp"
+            android:textSize="15sp"
+            android:letterSpacing="0.01"
+            android:textColor="@color/white"
+            android:editable="false"
+            android:inputType="none"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/sent_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sentmsglayout"
+        app:layout_constraintEnd_toEndOf="@id/sentmsglayout"
+        android:layout_marginEnd="7dp"
+        android:textColor="#686363"
+        android:textSize="10sp"
+        android:text=""
+
+        android:layout_marginTop="1dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
